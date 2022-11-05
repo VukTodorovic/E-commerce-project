@@ -1,0 +1,7 @@
+.MainContent {
+    border-left: 2px solid gray;
+    display: flex;
+    justify-content: space-around;
+    align-content:space-between;
+    flex-wrap: wrap;
+}

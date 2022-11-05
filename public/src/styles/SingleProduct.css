@@ -1,0 +1,61 @@
+.SingleProduct {
+    background-color: rgb(200, 200, 200);
+    border: 2px solid black;
+    width: 20%;
+    height: 20%;
+    display:block;
+    text-align: center;
+    border-radius: 5%;
+    margin-bottom: 5%;
+}
+
+.single_product_wrapper {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Naslov */
+
+.single_product_header {
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.single_product_header p {
+    font-size: 1vw;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Slika */
+
+.slikaDiv {
+    height: 60%;
+    display: flex;
+}
+
+.product_image {
+    border: 2px solid black;
+    height: 100%;
+    margin: auto;
+}
+
+/* Donja sekcija */
+
+.down_section {
+    height: 20%;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.down_section p{
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 1vw;
+}
+
