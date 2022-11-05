@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Product 1",
+        "company": "Samsung",
+        "price": 100,
+        "description": "Description of 1. product"
+    },
+    {
+        "name": "Product 2",
+        "company": "Apple",
+        "price": 200,
+        "description": "Description of 2. product"
+    },
+    {
+        "name": "Product 3",
+        "company": "Huawei",
+        "price": 300,
+        "description": "Description of 3. product"
+    },
+    {
+        "name": "Product 4",
+        "company": "Honor",
+        "price": 400,
+        "description": "Description of 4. product"
+    },
+    {
+        "name": "Product 5",
+        "company": "Xiaomi",
+        "price": 500,
+        "description": "Description of 5. product"
+    }
+]
