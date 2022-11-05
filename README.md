@@ -1,5 +1,16 @@
 # E-commerce project
 
-## Prvi commit
+## Short description
 
-Pocetak projekta
+My personal project
+
+## Features
+// TODO
+
+## Tech stack
+
+**MERN** stack is used for developing this project:
+- MongoDB
+- ExpressJS
+- ReactJS
+- NodeJS
