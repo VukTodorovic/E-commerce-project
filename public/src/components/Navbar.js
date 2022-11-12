@@ -45,7 +45,7 @@ class Navbar extends React.Component {
                     </div>
     
                     <div className="center-container">
-                        <img src={logo} alt="Logo" id="logo-image"></img>
+                        <img src={logo} alt="Loading..." id="logo-image"></img>
                     </div>
     
                     <div className="right-container">

@@ -3,10 +3,6 @@ import React from 'react'
 import productImage from '../images/shopping-cart.png';
 
 class SingleProduct extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <div className="SingleProduct">
@@ -15,7 +11,10 @@ class SingleProduct extends React.Component {
                         <p>{this.props.name}</p>
                     </div>             
                     <div className='slikaDiv'>
-                        <img src={productImage} className="product_image"></img>
+                        <img src={productImage} alt="Loading..." className="product_image" onClick={() => {
+                            this.props.promeniEkran(this.props.productId);
+                        }}>
+                        </img>
                     </div>
                     <div className="down_section">
                         <p>${this.props.price}</p><p>Add to cart</p>

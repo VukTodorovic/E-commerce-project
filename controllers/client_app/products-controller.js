@@ -1,25 +1,28 @@
 const mongoose = require('mongoose');
 const Product = require('../../models/Product')
+const {StatusCodes} = require('http-status-codes');
 
-const testRoute = (req, res) => {
-    //throw Error('Nesto je poslo po zlu zaime Boga');
-    res.send('<h1>Test route</h1>');
-}
 
 const getProducts = async (req, res) => {
     const products = await Product.find();
 
-    res.json({products, nbHits: products.length});
+    res.status(StatusCodes.OK).json({ products, nbHits: products.length });
 }
 
 const getSingleProduct = async (req, res) => {
-    res.send('<h1>Get Single Product</h1>');
+    const productId = req.params.id;
+    const product = await Product.findOne({_id : productId});
+
+    if(!product) {
+        throw new Error(`No product with id ${productId}`);
+    }
+
+    res.status(StatusCodes.OK).json(product);
 }
 
 
 
 module.exports = {
-    testRoute,
     getProducts,
     getSingleProduct
 }

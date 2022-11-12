@@ -1,8 +1,7 @@
 import '../styles/MainContent.css';
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 import SingleProduct from './SingleProduct';
-import {getProducts} from '../routes/user_app/products/products-routes'; 
+import {getProducts} from '../routes/user_app/products-routes'; 
 
 class MainContent extends React.Component {
     constructor(props) {
@@ -25,13 +24,12 @@ class MainContent extends React.Component {
 
     render() {
         const {productsData} = this.state;
-        console.log('Products data:', productsData);
 
         return productsData !== null ? (
             <div className="MainContent">
                 {
-                    productsData.map((item,index)=>{
-                        return <SingleProduct name={item.company} price={item.price}/>
+                    productsData.map((item, index)=>{
+                        return <SingleProduct key={item._id} productId={item._id} name={item.company} price={item.price} promeniEkran={this.props.promeniEkran}/>
                     })
                 }
             </div>    
