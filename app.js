@@ -3,6 +3,9 @@ const app = express();
 const connectDB = require('./db/connect');
 require('dotenv').config();
 
+// extra security packages
+const cors = require('cors');
+
 const productRouter = require('./routes/client_app/product-router.js');
 const notFoundMiddleware = require('./middleware/not-found');
 const errorHandlerMiddleware = require('./middleware/error-handler');
@@ -13,6 +16,7 @@ require('express-async-errors');
 
 // middleware
 app.use(express.json());
+app.use(cors());
 
 // routes
 app.use('/api/v1/products/', productRouter);

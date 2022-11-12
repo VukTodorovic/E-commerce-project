@@ -12,13 +12,13 @@ class SingleProduct extends React.Component {
             <div className="SingleProduct">
                 <div className="single_product_wrapper">
                     <div className="single_product_header">
-                        <p>Product name</p>
+                        <p>{this.props.name}</p>
                     </div>             
                     <div className='slikaDiv'>
                         <img src={productImage} className="product_image"></img>
                     </div>
                     <div className="down_section">
-                        <p>$130</p><p>Add to cart</p>
+                        <p>${this.props.price}</p><p>Add to cart</p>
                     </div> 
                 </div>    
             </div> 
