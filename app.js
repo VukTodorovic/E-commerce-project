@@ -15,6 +15,7 @@ require('express-async-errors');
 
 
 // middleware
+app.use(express.static('./public/build'));
 app.use(express.json());
 app.use(cors());
 

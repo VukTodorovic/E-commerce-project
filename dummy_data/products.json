@@ -28,5 +28,107 @@
         "company": "Xiaomi",
         "price": 500,
         "description": "Description of 5. product"
+    },
+    {
+        "name": "Product 6",
+        "company": "Samsung",
+        "price": 600,
+        "description": "Description of 6. product"
+    },
+    {
+        "name": "Product 7",
+        "company": "Apple",
+        "price": 700,
+        "description": "Description of 7. product"
+    },
+    {
+        "name": "Product 8",
+        "company": "Huawei",
+        "price": 800,
+        "description": "Description of 8. product"
+    },
+    {
+        "name": "Product 9",
+        "company": "Honor",
+        "price": 900,
+        "description": "Description of 9. product"
+    },
+    {
+        "name": "Product 10",
+        "company": "Xiaomi",
+        "price": 1000,
+        "description": "Description of 10. product"
+    },
+    {
+        "name": "Product 11",
+        "company": "Samsung",
+        "price": 1100,
+        "description": "Description of 11. product"
+    },
+    {
+        "name": "Product 12",
+        "company": "Apple",
+        "price": 1200,
+        "description": "Description of 12. product"
+    },
+    {
+        "name": "Product 13",
+        "company": "Huawei",
+        "price": 1300,
+        "description": "Description of 13. product"
+    },
+    {
+        "name": "Product 14",
+        "company": "Honor",
+        "price": 1400,
+        "description": "Description of 14. product"
+    },
+    {
+        "name": "Product 15",
+        "company": "Xiaomi",
+        "price": 1500,
+        "description": "Description of 15. product"
+    },
+    {
+        "name": "Product 16",
+        "company": "Samsung",
+        "price": 1600,
+        "description": "Description of 16. product"
+    },
+    {
+        "name": "Product 17",
+        "company": "Apple",
+        "price": 1700,
+        "description": "Description of 17. product"
+    },
+    {
+        "name": "Product 18",
+        "company": "Huawei",
+        "price": 1800,
+        "description": "Description of 18. product"
+    },
+    {
+        "name": "Product 19",
+        "company": "Honor",
+        "price": 1900,
+        "description": "Description of 19. product"
+    },
+    {
+        "name": "Product 20",
+        "company": "Xiaomi",
+        "price": 2000,
+        "description": "Description of 20. product"
+    },
+    {
+        "name": "Product 21",
+        "company": "Honor",
+        "price": 2100,
+        "description": "Description of 21. product"
+    },
+    {
+        "name": "Product 22",
+        "company": "Xiaomi",
+        "price": 2200,
+        "description": "Description of 22. product"
     }
 ]
