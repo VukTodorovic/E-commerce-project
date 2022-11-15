@@ -27,12 +27,23 @@ class MainContent extends React.Component {
 
         return productsData !== null ? (
             <div className="MainContent">
-                {
-                    productsData.map((item, index)=>{
-                        return <SingleProduct key={item._id} productId={item._id} name={item.company} price={item.price} promeniEkran={this.props.promeniEkran}/>
-                    })
-                }
-            </div>    
+                <div className="FilterMenu"> 
+                    <p>Filter menu</p>
+                    <hr />
+                    <p>filter 1</p>
+                    <p>filter 2</p>
+                    <p>filter 3</p>
+                    <p>filter 4</p>
+                    <p>filter 5</p>
+                </div>
+                <div className="Content">
+                    {
+                        productsData.map((item, index)=>{
+                            return <SingleProduct key={item._id} productId={item._id} name={item.company} price={item.price}/>
+                        })
+                    }
+                </div>
+            </div>
         ) : (<h1>Loading products...</h1>)
     }
 }

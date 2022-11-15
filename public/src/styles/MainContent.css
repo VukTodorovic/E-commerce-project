@@ -1,4 +1,18 @@
 .MainContent {
+    display: inline-flex;
+}
+
+.FilterMenu {
+    width: 15%;
+    margin: 0px;
+    border-right: 2px solid gray;
+    margin: 0;
+    padding: 0;
+}
+
+.Content {
+    width: 85%;
+    margin: 0px;
     border-left: 2px solid gray;
     display: flex;
     justify-content: space-around;

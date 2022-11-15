@@ -19,7 +19,7 @@ class ProductPage extends React.Component {
     }
 
     componentDidMount() {
-        this.loadSingleProduct();
+        //this.loadSingleProduct();
     }
 
     render() {

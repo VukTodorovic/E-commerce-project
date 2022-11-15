@@ -12,19 +12,8 @@
 
 .main-wrapper {
     margin-top: 7vh; /* Mora se odvojiti malo od vrha zbog sticky nav bara */
-    display: inline-flex;
     width: 60%;
     /* height: 200vh; */
-}
-
-.FilterMenu {
-    width: 15%;
-    margin: 0px;
-}
-
-.MainContent {
-    width: 85%;
-    margin: 0px;
 }
 
 p {

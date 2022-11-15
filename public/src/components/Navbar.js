@@ -38,8 +38,8 @@ class Navbar extends React.Component {
                 <div className="navbar-center">
                     <div className="left-container">
                         <ul>
-                            <li><a href='#'>Categories</a></li>
-                            <li><a href='#'>Search</a></li>
+                            <li><a href='https://www.google.com'>Categories</a></li>
+                            <li><a href='https://www.google.com'>Search</a></li>
                         </ul>
                         
                     </div>
@@ -50,8 +50,8 @@ class Navbar extends React.Component {
     
                     <div className="right-container">
                         <ul>
-                            <li><a href='#'><img src={cartIcon} alt="Cart" id="shopping-cart-image"></img></a></li>
-                            <li><a href='#' id="cart-anchor">Login / Register</a></li>
+                            <li><a href='https://www.google.com'><img src={cartIcon} alt="Cart" id="shopping-cart-image"></img></a></li>
+                            <li><a href='https://www.google.com' id="cart-anchor">Login / Register</a></li>
                         </ul>                    
                     </div>
                 </div>
