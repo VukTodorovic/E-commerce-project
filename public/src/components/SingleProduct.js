@@ -16,7 +16,7 @@ const SingleProduct = (props) => {
                 <div className='slikaDiv'>
                     <img src={productImage} alt="Loading..." className="product_image" onClick={() => {
                         //this.props.navigation.navigate('product-page');
-                        navigate('product-page');
+                        navigate(`product-page/${props.productId}`);
                     }}>
                     </img>
                 </div>

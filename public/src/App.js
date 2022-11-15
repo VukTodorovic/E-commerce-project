@@ -18,7 +18,7 @@ class App extends React.Component {
           <div className="main-wrapper">
             <Routes>
               <Route exact path='/' element={ <MainContent /> } /> 
-              <Route exact path='/product-page' element={ <ProductPage /> } />  
+              <Route exact path='/product-page/:id' element={ <ProductPage /> } />  
           </Routes> 
           </div>
         </div>
