@@ -39,7 +39,7 @@ class MainContent extends React.Component {
                 <div className="Content">
                     {
                         productsData.map((item, index)=>{
-                            return <SingleProduct key={item._id} productId={item._id} name={item.company} price={item.price}/>
+                            return <SingleProduct key={item._id} productId={item._id} name={item.name} price={item.price}/>
                         })
                     }
                 </div>

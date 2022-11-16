@@ -4,7 +4,17 @@ const {StatusCodes} = require('http-status-codes');
 
 
 const getProducts = async (req, res) => {
-    const products = await Product.find();
+    // Fieldovi koji su potrebni da se getuju
+    const requiredFields = {
+        //_id: true,
+        name: true,
+        //company: false,
+        price: true,
+        //description: false,
+        img: true,
+    };
+
+    const products = await Product.find({}, requiredFields);
 
     res.status(StatusCodes.OK).json({ products, nbHits: products.length });
 }
