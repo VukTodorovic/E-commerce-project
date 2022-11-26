@@ -35,7 +35,6 @@ const getProducts = async (req, res) => {
     if(sort){
         // TODO
     }
-    console.log(queryObject);
 
     const products = await Product.find(queryObject, requiredFields);
 

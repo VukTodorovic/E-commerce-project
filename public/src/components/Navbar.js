@@ -1,6 +1,7 @@
 import '../styles/Navbar.css';
 import logo from '../images/spotify-logo-black.png';
 import cartIcon from '../images/shopping-cart.png';
+import searchIcon from '../images/search-icon.png';
 import React from 'react'
 
 class Navbar extends React.Component {
@@ -39,7 +40,11 @@ class Navbar extends React.Component {
                     <div className="left-container">
                         <ul>
                             <li><a href='https://www.google.com'>Categories</a></li>
-                            <li><a href='https://www.google.com'>Search</a></li>
+                            {/* <li><a href='https://www.google.com'>Search</a></li> */}
+                            <li className="search-wrapper">
+                                <input type="search" id="searchInput"></input>
+                                <img src={searchIcon} alt="S" id="search-image" onClick={()=>alert('123')}></img>
+                            </li>
                         </ul>
                         
                     </div>
