@@ -8,13 +8,36 @@ const getProducts = async (req, res) => {
     const requiredFields = {
         //_id: true,
         name: true,
-        //company: false,
         price: true,
-        //description: false,
         img: true,
+        company: true
     };
 
-    const products = await Product.find({}, requiredFields);
+    // Query parametri
+    const {
+        name,
+        company,
+        price,
+        sort
+    } = req.query;
+    let queryObject = {}; // Query object
+
+    if(name){
+        queryObject.name = { $regex: name, $options: "i" };
+    }
+    if(company) {
+        queryObject.company = company;
+    }
+    if(price){ // price ce uvek biti u formatu "price=<[__NUMBER__]"
+        const lowerThan = price.substring(1);
+        queryObject.price = { $lt:  lowerThan};
+    }
+    if(sort){
+        // TODO
+    }
+    console.log(queryObject);
+
+    const products = await Product.find(queryObject, requiredFields);
 
     res.status(StatusCodes.OK).json({ products, nbHits: products.length });
 }
