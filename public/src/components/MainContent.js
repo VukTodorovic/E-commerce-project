@@ -31,14 +31,28 @@ class MainContent extends React.Component {
 
         return productsData !== null ? (
             <div className="MainContent">
-                <div className="FilterMenu"> 
-                    <p>Filter menu</p>
+                <div className="FilterMenu">
+                    <p>Sort by:</p>
+                    <select name="sortingType" id="sortingType">
+                        <option value="none">none</option>
+                        <option value="name-asc">name (ascending)</option>
+                        <option value="name-desc">name (descending)</option>
+                        <option value="price-asc">price (ascending)</option>
+                        <option value="price-desc">price (descending)</option>                  
+                    </select>
+
                     <hr />
-                    <p>filter 1</p>
-                    <p>filter 2</p>
-                    <p>filter 3</p>
-                    <p>filter 4</p>
-                    <p>filter 5</p>
+
+                    <p>Price:</p>
+                    <input type="range" min="1" max="100" value="70" id="priceSlider"></input>
+
+                    <hr />
+
+                    <p>Company:</p>
+                    <div className='check-wrapper'>Apple <input type="checkbox" checked /></div>
+                    <div className='check-wrapper'>Huawei <input type="checkbox" checked /></div>
+                    <div className='check-wrapper'>Samsung <input type="checkbox" checked /></div>
+                    <div className='check-wrapper'>Xiaomi <input type="checkbox" /></div>
                 </div>
                 <div className="Content">
                     {

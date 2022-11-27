@@ -11,3 +11,9 @@
     border: 3px solid black;
     margin-top: 100px;
 }
+
+p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 25px;
+}

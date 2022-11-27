@@ -44,7 +44,7 @@ class Navbar extends React.Component {
                 <div className="navbar-center">
                     <div className="left-container">
                         <ul>
-                            <li><a href='https://www.google.com'>Categories</a></li>
+                            <li><a href='https://www.google.com'>Company</a></li>
                             {/* <li><a href='https://www.google.com'>Search</a></li> */}
                             <li className="search-wrapper">
                                 <input type="text" id="searchInput"></input>
