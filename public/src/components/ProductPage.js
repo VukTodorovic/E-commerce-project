@@ -4,28 +4,6 @@ import { getSingleProduct } from '../routes/user_app/products-routes';
 import { useParams } from 'react-router-dom'
 
 const ProductPage = () => {
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         product : null
-    //     }
-    // }
-
-    // async loadSingleProduct() {
-    //     //const product = await getSingleProduct('636fc6f0203dcd2149c48b87');
-    //     const product = await getSingleProduct(this.props.productId);
-    //     this.setState({ 
-    //         product: product
-    //     });
-    // }
-
-    // componentDidMount() {
-    //     //this.loadSingleProduct();
-    // }
-
-
-        //const {product} = this.state;
-
     const [product, setProduct] = useState(null);
     const { id } = useParams();
 
@@ -46,7 +24,7 @@ const ProductPage = () => {
                 <p><b>Company:</b> {product.company}</p>
                 <p><b>Price:</b> {product.price}</p>
                 <p><b>Description:</b> {product.description}</p>
-            </div>            
+            </div>
         </div> 
     ) : (<h1>Loading product info...</h1>)
 
