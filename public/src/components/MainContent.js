@@ -11,15 +11,19 @@ class MainContent extends React.Component {
         };
     }
 
-    async loadProducts() {
-        const data = await getProducts();
+    async loadProducts(options) {
+        const data = await getProducts(options);
         this.setState({ 
             productsData: data.products
         });
     }
 
     componentDidMount() {
-        this.loadProducts();
+        this.loadProducts({ search: this.props.searchText });
+    }
+
+    componentDidUpdate() {
+        this.loadProducts({ search: this.props.searchText });
     }
 
     render() {

@@ -28,6 +28,11 @@ class Navbar extends React.Component {
         })  
     }
 
+    searchAction(){
+        const searchText = document.querySelector('#searchInput').value;
+        this.props.triggerNavbarAction(searchText);
+    }
+
     render() {
         let shadowClass = '';
         if(this.state.underShadow) {
@@ -42,8 +47,8 @@ class Navbar extends React.Component {
                             <li><a href='https://www.google.com'>Categories</a></li>
                             {/* <li><a href='https://www.google.com'>Search</a></li> */}
                             <li className="search-wrapper">
-                                <input type="search" id="searchInput"></input>
-                                <img src={searchIcon} alt="S" id="search-image" onClick={()=>alert('123')}></img>
+                                <input type="text" id="searchInput"></input>
+                                <img src={searchIcon} alt="S" id="search-image" onClick={()=>this.searchAction()}></img>
                             </li>
                         </ul>
                         
