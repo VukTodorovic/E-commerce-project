@@ -26,11 +26,12 @@ const getProducts = async (req, res) => {
         queryObject.name = { $regex: name, $options: "i" };
     }
     if(company) {
-        queryObject.company = company;
+        const companies = company.split(' ');
+        queryObject.company = { $in: companies };
     }
     if(price){ // price ce uvek biti u formatu "price=<[__NUMBER__]"
         const lowerThan = price.substring(1);
-        queryObject.price = { $lt:  lowerThan};
+        queryObject.price = { $lt:  lowerThan };
     }
     if(sort){
         // TODO
