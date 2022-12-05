@@ -15,10 +15,10 @@ class MainContent extends React.Component {
     constructor(props) {
         super(props);
 
-        let searchText = null;
-        if(this.props.searchText){
-            searchText = this.props.searchText;
-        }
+        let searchText = this.props.searchText;
+        // if(this.props.searchText){
+        //     searchText = this.props.searchText;
+        // }
 
         this.state = {
             productsData: null,
@@ -57,6 +57,38 @@ class MainContent extends React.Component {
         //this.loadProducts(options);
     }
 
+    onSortSelect(element) {
+        const sortType = element.target.value;
+        let newSortState;
+
+        switch(Number(sortType)){  // Mora se konvertovati jer <select> element daje string kao value
+            case this.sortEnum.NONE:
+                newSortState = 'NONE';
+                break;
+            case this.sortEnum.NAME_ASC:
+                newSortState = 'NAME_ASC';
+                break;
+            case this.sortEnum.NAME_DES:
+                newSortState = 'NAME_DES';
+                break;
+            case this.sortEnum.PRICE_ASC:
+                newSortState = 'PRICE_ASC';
+                break;
+            case this.sortEnum.PRICE_DES:
+                newSortState = 'PRICE_DES';
+                break;
+            default:
+                throw Error('Type does not match with enum for variable sortType');
+        }
+
+        this.setState({
+            sort: newSortState
+        });
+
+        console.log('sort state:', this.state.sort);
+        this.loadProducts();
+    }
+
     onSliderChange(element) {
         const maxPrice = element.target.value;
         this.setState({
@@ -73,6 +105,7 @@ class MainContent extends React.Component {
         this.loadProducts();
     }
 
+
     render() {
         const {productsData} = this.state;
         //console.log('123');
@@ -81,7 +114,7 @@ class MainContent extends React.Component {
             <div className="MainContent">
                 <div className="FilterMenu">
                     <p>Sort by:</p>
-                    <select name="sortingType" id="sortingType">
+                    <select name="sortingType" id="sortingType" onChange={(element)=> this.onSortSelect(element)}>
                         <option value={this.sortEnum.NONE}>none</option>
                         <option value={this.sortEnum.NAME_ASC}>name (ascending)</option>
                         <option value={this.sortEnum.NAME_DES}>name (descending)</option>

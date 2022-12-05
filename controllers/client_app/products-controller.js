@@ -33,11 +33,13 @@ const getProducts = async (req, res) => {
         const lowerThan = price.substring(1);
         queryObject.price = { $lt:  lowerThan };
     }
+
+    let result = Product.find(queryObject, requiredFields);
     if(sort){
-        // TODO
+        result = result.sort(sort);
     }
 
-    const products = await Product.find(queryObject, requiredFields);
+    const products = await result;
 
     res.status(StatusCodes.OK).json({ products, nbHits: products.length });
 }

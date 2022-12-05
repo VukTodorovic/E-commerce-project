@@ -30,13 +30,33 @@ const getProducts = async (options) => {
         urlParameters += '&price=' + '<' + price;
     }
       
-    if(sort) {
-        urlParameters += '&sort=' + sort;
+    if(sort && sort !== 'NONE') {
+        let sortString;
+
+        switch(sort){
+            case 'NAME_ASC':
+                sortString = 'name';
+                break;
+            case "NAME_DES":
+                sortString = '-name';
+                break;
+            case 'PRICE_ASC':
+                sortString = 'price';
+                break;
+            case 'PRICE_DES':
+                sortString = '-price';
+                break;
+            default:
+                sortString = 'createdAt';
+                break;
+        }
+
+        urlParameters += '&sort=' + sortString;
     }
 
     urlParameters = urlParameters.substring(1);  // Uklanja '&' viska sa pocetka
     requestURL += '?' + urlParameters;
-    console.log("Request URL:", requestURL);
+    console.log('Request URL:', requestURL);
 
     let response = await fetch(requestURL);
     let data = await response.json();
