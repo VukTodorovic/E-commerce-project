@@ -44,7 +44,7 @@ class Navbar extends React.Component {
                 <div className="navbar-center">
                     <div className="left-container">
                         <ul>
-                            <li><a href='https://www.google.com'>Company</a></li>
+                            {/* <li><a href='https://www.google.com'>Company</a></li> */}
                             {/* <li><a href='https://www.google.com'>Search</a></li> */}
                             <li className="search-wrapper">
                                 <input type="text" id="searchInput"></input>
@@ -61,7 +61,7 @@ class Navbar extends React.Component {
                     <div className="right-container">
                         <ul>
                             <li><a href='https://www.google.com'><img src={cartIcon} alt="Cart" id="shopping-cart-image"></img></a></li>
-                            <li><a href='https://www.google.com' id="cart-anchor">Login / Register</a></li>
+                            {/* <li><a href='https://www.google.com' id="cart-anchor">Login / Register</a></li> */}
                         </ul>                    
                     </div>
                 </div>

@@ -1,5 +1,6 @@
 .MainContent {
     display: inline-flex;
+    width: 100%;
 }
 
 .Content {
@@ -42,5 +43,16 @@
     display: block;
 }
 
+/* select {
+    color: black;    
+} */
+
+input[type="range"] {
+    accent-color: black;    
+}
+
+input[type="checkbox"] {
+    accent-color: black;    
+}
 
 
